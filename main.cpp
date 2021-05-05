@@ -1,11 +1,14 @@
 #include <iostream>
 #include "adder.h"
 #include <GLFW/glfw3.h>
-int main()
+#include <OLASConfig.h>
+
+int main(int argc, char* argv[])
 {
     std::cout << add(45, 45)<< '\n';
 
-    
+    std::cout << argv[0] << " Version " << OLAS_VERSION_MAJOR << "." << OLAS_VERSION_MINOR << "\n";
+
 GLFWwindow *window;
     if( !glfwInit() )
     {
